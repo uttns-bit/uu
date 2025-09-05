@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hello World</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        
+        .main-text {
+            font-size: clamp(3rem, 10vw, 15rem);
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+            max-width: 90%;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 255, 255, 0.2);
+            }
+            to {
+                text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 50px rgba(255, 255, 255, 0.4);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-text {
+                font-size: clamp(2rem, 12vw, 8rem);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-text {
+                font-size: clamp(1.5rem, 15vw, 6rem);
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-text">
+        Hello World
+    </div>
+</body>
+</html>
